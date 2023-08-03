@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<section class="f-section">
+    {% include "messages.html" %}
+    <h1 class="text-center">Travel <span>Booking</span> Management System</h1>
+    <div class="main-container">
+        <form action="/search" method="get">
+            <div class="left">
+                <div class="box">
+                    <input type="text" name="from" placeholder="From" required="">
+                    <input type="text" name="to" placeholder="To" required="">
+                </div>
+                <div class="box">
+                    <input type="number" name="adult" placeholder="Adult">
+                    <input type="number" name="child" placeholder="Children">
+                </div>
+               
+
+            <button class="bnt">Search Flights</button>
+        </div>
+        </form>
+        <div class="right">
+            <h1>Meke Your <span>Reservation</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime illo rem animi totam labore numquam
+                vitae consequatur odit possimus eos nisi laborum exercitationem, non incidunt eius laboriosam mollitia
+                minus. Porro neque, repudiandae accusamus laudantium vero ipsum ad optio debitis distinctio.</p>
+            </div>
+        </div>
+    </section>
+    
+{% endblock body %}

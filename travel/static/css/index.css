@@ -1,0 +1,149 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 8px;
+
+    background: #1f242d;
+}
+
+.Fhidden {
+    display: none;
+}
+
+.container {
+    background-color: transparent;
+    width: 400px;
+    position: absolute;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    top: 8rem;
+    left: 28rem;
+}
+
+.container,
+.Finput,
+.Fbtn {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form>*.first-child {
+    margin-top: 0;
+}
+
+.form>*.last-child {
+    margin-bottom: 0;
+}
+
+.Ftitle {
+    text-align: center;
+}
+
+.form_msg {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form_msg {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.fmsg--success {
+    color: var(--color-success);
+}
+
+.fmsg--error {
+    color: var(--color-error);
+}
+
+.input_group {
+    margin-bottom: 1rem;
+}
+
+.Finput {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 13px;
+    /* border-radius: var(--border-radius); */
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.Finput:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+
+}
+
+.Finput--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.Ferror {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.Fbtn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+    transition: 0.8s ease;
+}
+
+.Fbtn:hover {
+    background: #0ef;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.Finput:active {
+    transform: scale(3.10);
+}
+
+.Ftext {
+    text-align: center;
+}
+
+.Flink {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Flink:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:580px) {
+    .login-container {
+        margin-top: 5rem;
+        margin-left: -22rem;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .login-container {
+        margin-top: 5rem;
+        margin-left: -27rem;
+    }
+}

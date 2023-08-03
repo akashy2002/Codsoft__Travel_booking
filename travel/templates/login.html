@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+{% block title %}Login{% endblock title %}
+{% load static %}
+
+
+{% block body %}    
+<div class="container login-container">
+    <h1 class="Ftitle">Login</h1>
+    <form action="/login" method="post" class="form loginNew" id="login">
+        {% csrf_token %}
+            {%include "messages.html"%}
+            <div class="form_msg fmsg--error"></div>
+            <div class="input_group">
+                <input type="text" class="Finput" name="username" placeholder="Username or email">
+                <div class="Ferror"></div>
+            </div>
+            <div class="input_group">
+                <input type="password" class="Finput" name="password" placeholder="Password">
+            </div>
+            <button class="Fbtn" type="submit">Login</button>
+            <p class="Ftext">
+                <a href="" class="Flink forgotpass">Forgot your password</a>
+            </p>
+            <p class="Ftext">
+                <a id="goSignin" href="/register"  class="Flink loginNow">Don't have an account? Create account</a>
+            </p>
+        </form>
+    </div>
+
+
+
+{% endblock body %}

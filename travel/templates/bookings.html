@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Bookings{% endblock title %}
+
+{% block body %}
+
+    <section class="show-bookings">
+        {% include "messages.html" %}
+
+        <h1 class="text-center">Your <span>Bookings</span></h1>
+        <hr>
+        <table>
+            <tr>
+                <th>From,To</th>
+                <th>Date</th>
+                <th>Price</th>
+                {% comment %} <th>Gender</th>
+                <th>Class</th> {% endcomment %}
+                <th>Status</th>
+
+            </tr>
+            {% if f_bookings %}
+            {% for f in f_bookings %}
+            <tr>
+                <td>{{f.Name}} To {{f.Name.to}}</td>
+                <td>{{f.start_date}}</td>
+                <td>Rs.{{f.Name.flight_price}}</td>
+                {% comment %} <td>{{f.Gender}}</td>
+                <td>{{f.Class}}</td> {% endcomment %}
+                <td class="status">{{f.booking_type}}</td>
+                
+            </tr>
+
+            {% endfor %}
+            {% else %}
+            <h3 class="text-center">PLEASE <span>BOOK</span> YOUR TICKET!</h3>
+            {% endif %}
+        </table>
+    </section>
+{% endblock body %}

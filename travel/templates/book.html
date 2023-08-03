@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Booking{% endblock title %}
+
+{% block body %}
+
+
+    <section class="f-section">
+        <h1 class="text-center">Ticket <span>Booking</span></h1>
+
+        <div class="main-container m-2">
+            <form method="post">
+                {% csrf_token %}
+                <div class="left left-2 left-3">
+                    <div class="box booking-box">
+                        {% comment %} <img src="{{.image.url}}" alt=""> {% endcomment %}
+                        <input type="date" name="dates">
+                <input type="text" name="class" placeholder="Pasanger Name">
+                         <div class="gender">
+                Economy:<input type="radio" name="class">
+                Business:<input type="radio" name="class">
+                </div>
+                <div class="gender">
+                Male:<input type="radio" name="gender">
+                Female:<input type="radio" name="gender">
+                </div>
+                        <button type="Submit" class="btn-2">Submit</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock body %}
+
